@@ -13,7 +13,7 @@ angular.module('nodeTodo', [])
                 console.log('Error: ' + error);
             });
 
-        $scope.createTodo = function(todoID) {
+        $scope.createTodo = function() {
             $http.post('/api/v1/todos', $scope.formData)
                 .success(function(data) {
                     $scope.formData = {};
